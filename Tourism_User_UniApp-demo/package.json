@@ -1,0 +1,18 @@
+{
+  "name": "tourism-user-uniapp-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "uni",
+    "build": "uni build"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4",
+    "uqrcodejs": "^4.0.7",
+    "uview-ui": "^2.0.38"
+  },
+  "devDependencies": {
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.2-5000720260410001",
+    "sass": "^1.77.8"
+  }
+}

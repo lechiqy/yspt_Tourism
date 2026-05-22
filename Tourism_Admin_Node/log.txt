@@ -1,0 +1,95 @@
+数据库同步成功
+服务器运行在 0.0.0.0:3001
+运行JWT验证
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbklEIjoxLCJVc2VybmFtZSI6ImFkbWluIiwiUm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5Mzg1NTExLCJleHAiOjE3Nzk5OTAzMTF9.5yqj1DbKLkiE0GNfP8rHLwmnt9-Cv3hkdcYnkeKqAxk
+解码后的数据: {
+  AdminID: 1,
+  Username: 'admin',
+  Role: 'admin',
+  iat: 1779385511,
+  exp: 1779990311
+}
+Executing (default): SELECT count(*) AS `count` FROM `Activities` AS `Activities`;
+运行JWT验证
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbklEIjoxLCJVc2VybmFtZSI6ImFkbWluIiwiUm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5Mzg1NTExLCJleHAiOjE3Nzk5OTAzMTF9.5yqj1DbKLkiE0GNfP8rHLwmnt9-Cv3hkdcYnkeKqAxk
+解码后的数据: {
+  AdminID: 1,
+  Username: 'admin',
+  Role: 'admin',
+  iat: 1779385511,
+  exp: 1779990311
+}
+运行获取管理端线路列表
+运行JWT验证
+token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbklEIjoxLCJVc2VybmFtZSI6ImFkbWluIiwiUm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5Mzg1NTExLCJleHAiOjE3Nzk5OTAzMTF9.5yqj1DbKLkiE0GNfP8rHLwmnt9-Cv3hkdcYnkeKqAxk
+解码后的数据: {
+  AdminID: 1,
+  Username: 'admin',
+  Role: 'admin',
+  iat: 1779385511,
+  exp: 1779990311
+}
+Executing (default): SELECT `ActivityID`, `Title`, `CoverImage`, `Description`, `Status`, `StartDate`, `EndDate`, `Location`, `Price`, `MaxParticipants`, `CurrentParticipants`, `JoinType`, `LinkType`, `LinkValue`, `Sort`, `createdAt`, `updatedAt` FROM `Activities` AS `Activities` ORDER BY `Activities`.`Sort` ASC, `Activities`.`createdAt` DESC LIMIT 0, 10;
+Executing (default): SELECT count(`Routes`.`RouteID`) AS `count` FROM `Routes` AS `Routes` LEFT OUTER JOIN `Admins` AS `admin` ON `Routes`.`AdminID` = `admin`.`AdminID`;
+获取活动列表失败: Error
+    at Query.run (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Activities.findAll (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async Activities.findAndCountAll (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\model.js:1322:27)
+    at async G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\routes\activities.js:182:33 {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'LinkType' in 'field list'
+      at Packet.asError (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\packets\packet.js:788:17)
+      at Query.execute (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\base\connection.js:552:34)
+      at PacketParser.onPacket (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\base\connection.js:102:12)
+      at PacketParser.executeStart (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\base\connection.js:109:25)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'LinkType' in 'field list'",
+    sql: 'SELECT `ActivityID`, `Title`, `CoverImage`, `Description`, `Status`, `StartDate`, `EndDate`, `Location`, `Price`, `MaxParticipants`, `CurrentParticipants`, `JoinType`, `LinkType`, `LinkValue`, `Sort`, `createdAt`, `updatedAt` FROM `Activities` AS `Activities` ORDER BY `Activities`.`Sort` ASC, `Activities`.`createdAt` DESC LIMIT 0, 10;',
+    parameters: undefined
+  },
+  original: Error: Unknown column 'LinkType' in 'field list'
+      at Packet.asError (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\packets\packet.js:788:17)
+      at Query.execute (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\base\connection.js:552:34)
+      at PacketParser.onPacket (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\base\connection.js:102:12)
+      at PacketParser.executeStart (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\mysql2\lib\base\connection.js:109:25)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'LinkType' in 'field list'",
+    sql: 'SELECT `ActivityID`, `Title`, `CoverImage`, `Description`, `Status`, `StartDate`, `EndDate`, `Location`, `Price`, `MaxParticipants`, `CurrentParticipants`, `JoinType`, `LinkType`, `LinkValue`, `Sort`, `createdAt`, `updatedAt` FROM `Activities` AS `Activities` ORDER BY `Activities`.`Sort` ASC, `Activities`.`createdAt` DESC LIMIT 0, 10;',
+    parameters: undefined
+  },
+  sql: 'SELECT `ActivityID`, `Title`, `CoverImage`, `Description`, `Status`, `StartDate`, `EndDate`, `Location`, `Price`, `MaxParticipants`, `CurrentParticipants`, `JoinType`, `LinkType`, `LinkValue`, `Sort`, `createdAt`, `updatedAt` FROM `Activities` AS `Activities` ORDER BY `Activities`.`Sort` ASC, `Activities`.`createdAt` DESC LIMIT 0, 10;',
+  parameters: {}
+}
+发生错误: Unknown column 'LinkType' in 'field list'
+错误详情: Error
+    at Query.run (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Activities.findAll (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async Activities.findAndCountAll (G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\node_modules\sequelize\lib\model.js:1322:27)
+    at async G:\0.1.lechiqy\软件工程\yspt_Tourism\Tourism_Admin_Node\routes\activities.js:182:33
+Executing (default): SELECT `Routes`.`RouteID`, `Routes`.`RouteName`, `Routes`.`Days`, `Routes`.`Price`, `Routes`.`Description`, `Routes`.`Status`, `Routes`.`CoverImage`, `Routes`.`AdminID`, `Routes`.`Images`, `Routes`.`createdAt`, `Routes`.`updatedAt`, `admin`.`AdminID` AS `admin.AdminID`, `admin`.`RealName` AS `admin.RealName` FROM `Routes` AS `Routes` LEFT OUTER JOIN `Admins` AS `admin` ON `Routes`.`AdminID` = `admin`.`AdminID` ORDER BY `Routes`.`createdAt` DESC LIMIT 0, 100;
+Executing (default): SELECT count(*) AS `count` FROM `Contents` AS `Contents`;
+Executing (default): SELECT `ContentID`, `Category`, `Title`, `Description`, `CoverImage`, `Images`, `RichContent`, `Address`, `Phone`, `createdAt`, `updatedAt` FROM `Contents` AS `Contents` ORDER BY `Contents`.`createdAt` DESC LIMIT 0, 100;

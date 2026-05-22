@@ -1,0 +1,17 @@
+=== 加载活动详情 ===
+activityDetail.vue:182 当前 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjExLCJVc2VybmFtZSI6IjIyMiIsIlJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc5Mzg3NjI2LCJleHAiOjE3Nzk5OTI0MjZ9.OzbmDqYz3l0N8bUcvirk5GGRNB5F9oNkc69RsfbfmG4
+request.js:12 === 发起请求 ===
+request.js:13 URL: http://192.168.10.123:3001/activities/detail/1
+request.js:14 Method: GET
+request.js:15 Data: undefined
+request.js:16 Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjExLCJVc2VybmFtZSI6IjIyMiIsIlJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc5Mzg3NjI2LCJleHAiOjE3Nzk5OTI0MjZ9.OzbmDqYz3l0N8bUcvirk5GGRNB5F9oNkc69RsfbfmG4
+request.js:47 请求任务已创建: 成功
+[pages/pagesA/ActivityDetail/activityDetail] Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./node-modules/uview-ui/components/u-loading-icon/u-loading-icon.wxss:27:1)
+[pages/pagesA/ActivityDetail/activityDetail] Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./node-modules/uview-ui/components/u-button/u-button.wxss:27:1)
+[pages/pagesA/ActivityDetail/activityDetail] Some selectors are not allowed in component wxss, including tag name selectors, ID selectors, and attribute selectors.(./node-modules/uview-ui/components/u-icon/u-icon.wxss:27:1)
+request.js:29 请求成功: /activities/detail/1 200 {data: {…}}
+activityDetail.vue:186 活动详情返回: {data: {…}}
+activityDetail.vue:188 detail.hasJoined: true
+activityDetail.vue:194 设置 hasJoined: true
+[pages/pagesA/ActivityDetail/activityDetail]  提示： text 组件包含了长文本，可以考虑增加 user-select 属性，方便用户复制。
+[pages/pagesA/ActivityDetail/activityDetail] [Component] <wx-image>: 图片链接 http://yspt-img.lechiqy.com/d0ad0a2b18811bd761198ccbe55556e4.jpg 不再支持 HTTP 协议，请升级到 HTTPS

@@ -1,0 +1,154 @@
+{
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/Login/login",
+            "style": {
+                "navigationBarTitleText": "登录"
+            }
+        },
+        {
+            "path": "pages/Register/register",
+            "style": {
+                "navigationBarTitleText": "注册"
+            }
+        },
+        {
+            "path": "pages/Privacy/privacy",
+            "style": {
+                "navigationBarTitleText": "隐私政策及服务协议"
+            }
+        }
+    ],
+    "subPackages": [
+        {
+            "root": "pages/pagesA",
+            "pages": [
+                {
+                    "path": "Routes/routes",
+                    "style": {
+                        "navigationBarTitleText": "旅游线路"
+                    }
+                },
+                {
+                    "path": "RouteDetail/routeDetail",
+                    "style": {
+                        "navigationBarTitleText": "线路详情"
+                    }
+                },
+                {
+                    "path": "Search/search",
+                    "style": {
+                        "navigationStyle": "custom"
+                    }
+                },
+                {
+                    "path": "Category/category",
+                    "style": {
+                        "navigationBarTitleText": "分类"
+                    }
+                },
+                {
+                    "path": "Activity/activity",
+                    "style": {
+                        "navigationBarTitleText": "热门活动"
+                    }
+                },
+                {
+                    "path": "ActivityDetail/activityDetail",
+                    "style": {
+                        "navigationBarTitleText": "活动详情"
+                    }
+                },
+                {
+                    "path": "ContentDetail/contentDetail",
+                    "style": {
+                        "navigationBarTitleText": "详情"
+                    }
+                },
+                {
+                    "path": "Webview/webview",
+                    "style": {
+                        "navigationBarTitleText": "详情"
+                    }
+                }
+            ]
+        },
+        {
+            "root": "pages/pagesB",
+            "pages": [
+                {
+                    "path": "Order/order",
+                    "style": {
+                        "navigationBarTitleText": "订单"
+                    }
+                },
+                {
+                    "path": "Order/myOrders",
+                    "style": {
+                        "navigationBarTitleText": "我的订单"
+                    }
+                },
+                {
+                    "path": "Order/orderDetail",
+                    "style": {
+                        "navigationBarTitleText": "订单详情"
+                    }
+                },
+                {
+                    "path": "User/user",
+                    "style": {
+                        "navigationBarTitleText": "个人中心"
+                    }
+                },
+                {
+                    "path": "Profile/profile",
+                    "style": {
+                        "navigationBarTitleText": "修改资料"
+                    }
+                },
+                {
+                    "path": "Review/review",
+                    "style": {
+                        "navigationBarTitleText": "评价"
+                    }
+                },
+                {
+                    "path": "Hongtuan/hongtuan",
+                    "style": {
+                        "navigationBarTitleText": "莆韵红团"
+                    }
+                },
+                {
+                    "path": "Hongji/hongji",
+                    "style": {
+                        "navigationBarTitleText": "莆韵红迹"
+                    }
+                },
+                {
+                    "path": "Version/version",
+                    "style": {
+                        "navigationBarTitleText": "版本信息"
+                    }
+                }
+            ]
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "莆韵红团",
+        "navigationBarBackgroundColor": "#000000",
+        "backgroundColor": "#f5f5f5"
+    },
+    "easycom": {
+        "autoscan": true,
+        "custom": {
+            "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+        }
+    }
+}
